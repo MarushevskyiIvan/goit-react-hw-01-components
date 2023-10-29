@@ -10,8 +10,7 @@ export const ProfileCard = styled.div`
 
   border: 1px solid #e7e9fc;
   border-radius: ${p => p.theme.radii.lg};
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: ${p => p.theme.shadow.main};
 `;
 
 export const ProfileWrapper = styled.div`
@@ -20,8 +19,7 @@ export const ProfileWrapper = styled.div`
   border: 1px solid #e7e9fc;
   border-radius: ${p => p.theme.radii.md};
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: ${p => p.theme.shadow.main};
 `;
 export const Description = styled.div`
   display: flex;
@@ -79,7 +77,7 @@ export const StatsItem = styled.li`
   border-radius: ${p => p.theme.radii.sm};
   border: 2px solid #e7e9fc;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: ${p => p.theme.shadow.main};
 `;
 
 export const StatsItemTitle = styled.span`
@@ -93,5 +91,5 @@ export const StatsItemText = styled.span`
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 500;
-  color: ${p => p.theme.colors.titleTextColor};
+  color: ${p => p.theme.colors.wite};
 `;

@@ -20,6 +20,9 @@ const theme = {
     lg: '16px',
   },
   spacing: value => `${value * 4}px`,
+  shadow: {
+    main: '0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.08)',
+  },
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

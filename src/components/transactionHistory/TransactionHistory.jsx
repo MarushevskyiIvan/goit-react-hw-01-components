@@ -3,24 +3,26 @@ import * as Styled from './Transaction.History';
 
 export const TransactionHistory = ({ item }) => {
   return (
-    <Styled.Table>
-      <thead>
-        <Styled.HeadRow>
-          <Styled.Row>Type</Styled.Row>
-          <Styled.Row>Amount</Styled.Row>
-          <Styled.Row>Currency</Styled.Row>
-        </Styled.HeadRow>
-      </thead>
-      <tbody>
-        {item.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+    <Styled.Wrapper>
+      <Styled.Table>
+        <thead>
+          <tr>
+            <Styled.HeadRow>Type</Styled.HeadRow>
+            <Styled.HeadRow>Amount</Styled.HeadRow>
+            <Styled.HeadRow>Currency</Styled.HeadRow>
           </tr>
-        ))}
-      </tbody>
-    </Styled.Table>
+        </thead>
+        <tbody>
+          {item.map(({ id, type, amount, currency }) => (
+            <tr key={id}>
+              <Styled.BodyRow>{type}</Styled.BodyRow>
+              <Styled.BodyRow>{amount}</Styled.BodyRow>
+              <Styled.BodyRow>{currency}</Styled.BodyRow>
+            </tr>
+          ))}
+        </tbody>
+      </Styled.Table>
+    </Styled.Wrapper>
   );
 };
 

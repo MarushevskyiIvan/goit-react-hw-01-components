@@ -3,14 +3,23 @@ import styled from 'styled-components';
 export const List = styled.ul`
   margin-top: ${p => p.theme.spacing(12)};
 `;
+export const ItemWrapper = styled.div`
+  background-color: ${p => p.theme.colors.wite};
 
-export const Item = styled.li`
+  padding: ${p => p.theme.spacing(3)};
+
   display: flex;
   align-items: center;
   justify-content: space-around;
 
-  width: 160px;
+  border: 1px solid #e7e9fc;
+  border-radius: ${p => p.theme.radii.sm};
+
+  box-shadow: ${p => p.theme.shadow.main};
+`;
+export const Item = styled.li`
   padding: ${p => p.theme.spacing(2)};
+  width: 200px;
   margin: 0 auto;
   margin-top: ${p => p.theme.spacing(4)};
 
@@ -18,14 +27,16 @@ export const Item = styled.li`
 
   border: 1px solid #e7e9fc;
   border-radius: ${p => p.theme.radii.md};
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  box-shadow: ${p => p.theme.shadow.main};
 `;
 
 export const ItemStatus = styled.span`
   width: 20px;
   height: 20px;
+
   border-radius: 50%;
+
   background-color: ${props => {
     if (props.$variant) {
       return 'green';
@@ -35,7 +46,8 @@ export const ItemStatus = styled.span`
 `;
 
 export const Name = styled.p`
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: ${p => p.theme.colors.mainTextColor};

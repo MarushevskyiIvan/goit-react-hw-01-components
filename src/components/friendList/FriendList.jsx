@@ -6,9 +6,11 @@ export const FriendList = ({ friendList }) => {
     <Styled.List>
       {friendList.map(({ id, avatar, name, isOnline }) => (
         <Styled.Item key={id}>
-          <Styled.ItemStatus $variant={isOnline}></Styled.ItemStatus>
-          <img src={avatar} alt={name} width="48" />
-          <Styled.Name>{name}</Styled.Name>
+          <Styled.ItemWrapper>
+            <Styled.ItemStatus $variant={isOnline}></Styled.ItemStatus>
+            <img src={avatar} alt={name} width="48" />
+            <Styled.Name>{name}</Styled.Name>
+          </Styled.ItemWrapper>
         </Styled.Item>
       ))}
     </Styled.List>

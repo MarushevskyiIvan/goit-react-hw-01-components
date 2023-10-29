@@ -11,8 +11,7 @@ export const Section = styled.section`
   border: 1px solid #e7e9fc;
   border-radius: ${p => p.theme.radii.lg};
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: ${p => p.theme.shadow.main};
 `;
 
 export const Wrapper = styled.div`
@@ -21,8 +20,7 @@ export const Wrapper = styled.div`
   border: 1px solid #e7e9fc;
   border-radius: ${p => p.theme.radii.md};
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: ${p => p.theme.shadow.main};
 
   overflow: hidden;
 `;
@@ -39,6 +37,10 @@ export const List = styled.ul`
 
   display: flex;
   justify-content: space-around;
+
+  border-radius: ${p => p.theme.radii.sm};
+
+  overflow: hidden;
 `;
 export const Item = styled.li`
   display: flex;
